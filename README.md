@@ -33,12 +33,23 @@ Edit this document to include your answers after each question. Make sure to lea
     Unlike .forEach, .map returns a new array while passing those elements to the callback function.
 
 2. What is the difference between a function and a method?
+    
+    Functions can hold values inside them while methods are ususally used to invoke functions.
 
 3. What is closure?
 
+    Closure refers to the lexical scope of a function.
+
 4. Describe the four rules of the 'this' keyword.
 
+    1. Window/Global Object Binding: 'this' will refer to the entire window/console object.
+    2. Implicit Binding: Whenever object.function() is called, 'this' refers to object.
+    3. New binding: requires the use of 'new' keyword. 'this' will refer to each new object being created/returned as the constructor object is repeatedly called.
+    4. Explicit binding: 'this' is defined explicitly within the .call and .apply syntax.
+
 5. Why do we need super() in an extended class?
+
+    super() takes away the need for .bind(), .call(), .apply() and Object.create(). It allows the parent's constructor to keep track of the child's attributes.
 
 ## Project Set up
 
