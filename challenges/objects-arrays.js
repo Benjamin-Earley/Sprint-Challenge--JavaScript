@@ -37,7 +37,7 @@ const velociraptor = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(`1. The T-Rex weighed ${tyrannosaurus.weight}. Holy cow!!!`);
+console.log(`Objects-Arrays:\n1. The T-Rex weighed ${tyrannosaurus.weight}. Holy cow!!!`);
 
 // What was the diet of a velociraptor?
 console.log(`2. The Velociraptor was a ${velociraptor.diet} creature. A true predator through and through!`);
