@@ -95,12 +95,12 @@ console.log(`First Name & Email:\n`, contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-// for(let i = 0; i < graduates.length; i++) {
-//   // if(graduates[i].university) {
-//     uni.push(graduates[i].university("Uni"));
-  
-// } 
-console.log(uni);
+for(let i = 0; i < graduates.length; i++) {
+  if(graduates[i].university.includes("Uni")) {
+    uni.push(graduates[i].university);
+  }
+} 
+console.log(`Includes "Uni":\n`, uni);
 
 
 // ==== ADVANCED Array Methods ====
@@ -125,10 +125,10 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-for(let i = 0; i < zooAnimals.length; i++) {
-  animalNames.push(`Name: ${zooAnimals[i].animal_name}, Scientific: ${zooAnimals[i].scientific_name}.`)
-}
-console.log(`Name, Scientific:\n`, animalNames);
+zooAnimals.forEach((zooAnimal) => {
+  animalNames.push(`Name: ${zooAnimal.animal_name}, Scientific: ${zooAnimal.scientific_name}.`)
+});
+console.log(`.forEach() -- Name, Scientific:\n`, animalNames);
 
 /* Request 2: .map()    
 
@@ -139,7 +139,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 const lowerCase = zooAnimals.map((name) => {
   return name.animal_name.toLowerCase();
 });
-console.log(`Lowercase Name:\n`, lowerCase); 
+console.log(`.map() -- Lowercase Name:\n`, lowerCase); 
 
 /* Request 3: .filter() 
 
@@ -149,7 +149,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 const lowerPopulation = zooAnimals.filter((headCount) => {
   return headCount.population < 5;
 });
-console.log(`Population < 5:\n`, lowerPopulation);
+console.log(`.filter() -- Population < 5:\n`, lowerPopulation);
 
 /* Request 4: .reduce() 
 
@@ -160,7 +160,7 @@ const populationTotal = zooAnimals.reduce((total, zoos) => {
   return total += zoos.population;
 }, 0);
 
-console.log(`Total US Animal Population:\n`, populationTotal);
+console.log(`.reduce() -- Total US Animal Population:\n`, populationTotal);
 
 
 /* 
